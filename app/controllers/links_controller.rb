@@ -1,11 +1,12 @@
+require 'open-uri'
 class LinksController < ApplicationController
+	before_action :find_website
+	
   def index
-  	@link = Link.find_by_id(params[:id])
+    @doc = Nokogiri::HTML(open(@website.site_url))
+    binding.pry
   	@links = Link.all 
-  end
 
-  def new
-  	@link = Link.new
   end
 
   def create 
@@ -14,11 +15,12 @@ class LinksController < ApplicationController
   end 
 
   def show
-  	
   end
 
  private 
-  def link_params
-  	params.require(:link).permit(:name, :url, :status)
-  end
+
+
+  def find_website
+  	@website = Website.find_by_id(params[:website_id])
+  end 
 end
