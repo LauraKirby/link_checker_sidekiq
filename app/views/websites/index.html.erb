@@ -1,0 +1,10 @@
+<h1>Website Index and New</h1>
+
+<%= form_for(@website, url: websites_path) do |f| %>
+  <div class="field">
+    <%= f.label :site_url %><br />
+    <%= f.text_field :site_url, autofocus: true %>
+  </div>
+  
+  <div class="actions"><%= f.submit "Submit" %></div>
+<% end %>

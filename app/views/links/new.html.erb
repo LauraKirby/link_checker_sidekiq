@@ -1,0 +1,12 @@
+h1>New Link</h1>
+
+<%= form_for(@link, url: new_path) do |f| %>
+  <div class="field">
+    <%= f.label :url %><br />
+    <%= f.text_field :url autofocus: true %>
+  </div>
+  
+  <div class="actions"><%= f.submit "Submit Link" %></div>
+<% end %>
+
+
