@@ -2,8 +2,13 @@
 
 <%= form_for(@website, url: websites_path) do |f| %>
   <div class="field">
+    <%= f.label :site_name %><br />
+    <%= f.text_field :site_name, autofocus: true %>
+  </div>
+
+  <div class="field">
     <%= f.label :site_url %><br />
-    <%= f.text_field :site_url, autofocus: true %>
+    <%= f.text_field :site_url %>
   </div>
   
   <div class="actions"><%= f.submit "Submit" %></div>

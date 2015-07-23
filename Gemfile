@@ -25,6 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'nokogiri'
 gem 'typhoeus'
 gem 'sidekiq'
+gem 'rest-client'
 gem 'pry-rails'
 
 # Use ActiveModel has_secure_password
